@@ -1,0 +1,18 @@
+In general TDD has been praised for it's advantages, described in section~\ref{benefits}, but of course it has it's drawbacks.\\
+
+\noindent In this section a drawback will be:
+\begin{itemize}
+\item an increased production cost, or
+\item a decreased code quality, as defined in section~\ref{quality}.
+\end{itemize}
+
+According to \begin{verbatim} http://www.sciencedirect.com/science?_ob=MiamiImageURL&_cid=271539&_user=745831&_pii=S0950584903002040&_check=y&_origin=article&_zone=toolbar&_coverDate=15-Apr-2004&view=c&originContentFamily=serial&wchp=dGLbVlB-zSkWz&md5=16ebc0c991d5a69b0aef824fc619a012/1-s2.0-S0950584903002040-main.pdf\end{verbatim} there are several shortcommings in TDD that may result in a lower code quality and/or increase the production time, and therefore the production cost:
+\begin{itemize}
+ \item \textit{Lack of Design} - Often TDD doesn't include an upfront design but rather an ad hoc design approach which could lead to unnecessary refactorisation and re-designing. 
+ \item \textit{Applicability of practice} - Certain functionalities, such as GUI's, are difficult to test and alot of time will be wasted on writing mock objects.
+ \item \textit{Reliance on refactoring} - Since no upfront design is made and mock objects are used much effort will be spent on refactorisation.
+ \item \textit{Skill level} - It takes good skill and discipline with the developers to incorporate TDD into their natural workflow. An unexperienced programmer may not be able to write adequate tests.\\
+\end{itemize}
+
+\noindent It is well-recognized that TDD decreases the programming speed and according to \begin{verbatim}http://www.springerlink.com/content/q91566748q234325/fulltext.pdf\end{verbatim} TDD may increase the development time by up to 30\%. 
+And according to the study, \begin{verbatim}http://www.soberit.hut.fi/edser-5/Papers/EDSER5.pdf#page=26\end{verbatim}, if the development time increasement is 30\% the rate at which defects are adjusted must be increased by at least 20\% to be beneficial when using TDD.

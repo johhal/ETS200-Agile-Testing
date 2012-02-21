@@ -165,12 +165,12 @@
 % *** GRAPHICS RELATED PACKAGES ***
 %
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+  \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
   % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+  \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
@@ -991,7 +991,7 @@ Keywords
 \appendix  % for no appendix heading
 % do not use \section anymore after \appendix, only \section*
 % is possibly needed
-\section*{}
+\section{Appendix}
 \input{appendix}
 % use appendices with more than one appendix
 % then use \section to start each appendix

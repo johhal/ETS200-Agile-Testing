@@ -15,4 +15,7 @@ According to George \& Williams ~\cite{georgeandwilliams} there are several shor
 \end{itemize}
 
 \noindent It is well-recognized that TDD decreases the programming speed and according to ~\cite{microsoftibm} TDD may increase the development time by up to 30\%. 
-And according to the study,~\cite{tddroi} is 30\% the rate at which defects are adjusted must be increased by at least 20\% to be beneficial when using TDD.
+And according to the study,~\cite{tddroi} if the increase in development time is 30\% the rate at which defects are adjusted must be increased by at least 20\% for TDD to be beneficial.
+
+When using TDD not only production code will be written, but mock objects and automated unit tests as well, which may result in a code explosion. And when refactoring and adding code, all the mock objects and test code must be maintained as well. Brett L. Schuchert made an intresting experience when he wrote a ``Hello World'' program in C++ using TDD and one when he didn't use TDD~\cite{helloworld}. 
+The TDD version of the program contained almost 16 times more lines of codes, 79 versus 5. Of course this result doesn't scale with the size of the program, i.e. a 100 loc without TDD won't be 1600 loc with TDD. However, this experiment shows that TDD isn't for every project.

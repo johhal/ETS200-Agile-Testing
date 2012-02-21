@@ -1,21 +1,21 @@
-In general TDD has been praised for it's advantages, described in section~\ref{benefits}, but of course it has it's drawbacks.\\
+In general TDD has been praised for it's advantages, described in section~\ref{benefits}, but still it has it's drawbacks. 
 
-\noindent In this section a drawback will be:
+In this section a drawback implies:
 \begin{itemize}
 \item an increased production cost, or
 \item a decreased code quality, as defined in section~\ref{quality}.
-\end{itemize}
+\end{itemize}		
 
-According to George \& Williams ~\cite{georgeandwilliams} there are several shortcommings in TDD that may result in a lower code quality and/or increase the production time, and therefore the production cost:
+\noindent According to George and Williams,~\cite{georgeandwilliams}, there are several shortcomings in TDD that may result in a lower code quality and/or increase the production time, and therefore the production cost:
 \begin{itemize}
  \item \textit{Lack of Design} - Often TDD doesn't include an upfront design but rather an ad hoc design approach which could lead to unnecessary refactorisation and re-designing. 
  \item \textit{Applicability of practice} - Certain functionalities, such as GUI's, are difficult to test and alot of time will be wasted on writing mock objects.
- \item \textit{Reliance on refactoring} - Since no upfront design is made and mock objects are used much effort will be spent on refactorisation.
- \item \textit{Skill level} - It takes good skill and discipline with the developers to incorporate TDD into their natural workflow. An unexperienced programmer may not be able to write adequate tests.\\
+ \item \textit{Reliance on refactoring} - Since no upfront design is made and mock objects are used, much effort will be spent on refactorisation.
+ \item \textit{Skill level} - It takes good skill and discipline with the developers to incorporate TDD into their natural work flow. An inexperienced programmer may not be able to write adequate tests.
 \end{itemize}
 
 \noindent It is well-recognized that TDD decreases the programming speed and according to ~\cite{microsoftibm} TDD may increase the development time by up to 30\%. 
-And according to the study,~\cite{tddroi} if the increase in development time is 30\% the rate at which defects are adjusted must be increased by at least 20\% for TDD to be beneficial.
+Further, the study~\cite{tddroi} states that if the increase in development time is 30\% the rate at which defects are adjusted must be increased by at least 20\% for TDD to be beneficial.
 
-\noindent When using TDD not only production code will be written, but mock objects and automated unit tests as well, which may result in a code explosion. And when refactoring and adding code, all the mock objects and test code must be maintained as well. Brett L. Schuchert made an intresting experience when he wrote a ``Hello World'' program in C++ using TDD and one when he didn't use TDD~\cite{helloworld}. 
-The TDD version of the program contained almost 16 times more lines of codes, 79 versus 5. Of course this result doesn't scale with the size of the program, i.e. a 100 loc without TDD won't be 1600 loc with TDD. However, this experiment shows that TDD isn't for every project.
+When using TDD not only production code will be written, but mock objects and automated unit tests as well, which may result in a code explosion, and when refactoring and adding code all the mock objects and test code must be maintained as well. Brett L. Schuchert made an interesting experience when he wrote a ``Hello World'' program in C++ using TDD and one when he didn't use TDD~\cite{helloworld}. 
+The TDD version of the program contained almost 16 times more lines of codes, 79 versus 5. Of course this result doesn't scale with the size of the program, i.e., a 100 LOC without TDD won't be 1600 LOC with TDD. However, this experiment shows that TDD isn't for every project.

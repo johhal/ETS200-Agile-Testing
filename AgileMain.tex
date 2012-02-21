@@ -1,5 +1,3 @@
-
-
 %% bare_adv.tex
 %% V1.3
 %% 2007/01/11
@@ -987,11 +985,15 @@ Keywords
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
 % or
+\clearpage
 \appendix  % for no appendix heading
 % do not use \section anymore after \appendix, only \section*
 % is possibly needed
+\newpage
 \section{Appendix}
 \input{appendix}
+
+
 % use appendices with more than one appendix
 % then use \section to start each appendix
 % you must declare a \section before using any
@@ -1041,6 +1043,7 @@ Keywords
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
+\newpage
 \begin{thebibliography}{1}
 \label{bibliography}
 

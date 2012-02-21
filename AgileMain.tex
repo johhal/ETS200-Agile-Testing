@@ -1,4 +1,5 @@
 
+
 %% bare_adv.tex
 %% V1.3
 %% 2007/01/11
@@ -84,6 +85,7 @@
 % manually specify the path to it like:
 % \documentclass[10pt,journal,compsoc]{../sty/IEEEtran}
 
+\usepackage{lipsum} % for dummy text only
 
 % For Computer Society journals, IEEEtran defaults to the use of 
 % Palatino/Palladio as is done in IEEE Computer Society journals.
@@ -127,7 +129,7 @@
 \ifCLASSOPTIONcompsoc
   % IEEE Computer Society needs nocompress option
   % requires cite.sty v4.0 or later (November 2003)
-  % \usepackage[nocompress]{cite}
+  \usepackage[nocompress]{cite}
 \else
   % normal IEEE
   % \usepackage{cite}
@@ -551,7 +553,7 @@
 
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
-%\usepackage{url}
+\usepackage{url}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version can be obtained at:
@@ -678,7 +680,6 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % correct bad hyphenation here
 \hyphenation{op-tical net-works semi-conduc-tor}
 
-
 \begin{document}
 %
 % paper title
@@ -777,8 +778,9 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % command as these need to go into the title area created by \maketitle.
 \IEEEcompsoctitleabstractindextext{%
 \begin{abstract}
+\label{abstract}
 %\boldmath
-The abstract goes here.
+\lipsum[1]
 \end{abstract}
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
@@ -820,33 +822,9 @@ Keywords
 % creates the second title. It will be ignored for other modes.
 \IEEEpeerreviewmaketitle
 
-
-
 \section{Introduction}
-%Introduction: introduce the chosen area. The purpose is to give an introduction to the reader who is not
-%familiar to the specific area, but knows software engineering and testing generally.
-
-This section will introduce the reader to the concept of Test Driven Development in Agile Processes and explain how it is performed and how it differs from other software development processes. 
-% Computer Society journal papers do something a tad strange with the very
-% first section heading (almost always called "Introduction"). They place it
-% ABOVE the main text! IEEEtran.cls currently does not do this for you.
-% However, You can achieve this effect by making LaTeX jump through some
-% hoops via something like:
-%
-%\ifCLASSOPTIONcompsoc
-%  \noindent\raisebox{2\baselineskip}[0pt][0pt]%
-%  {\parbox{\columnwidth}{\section{Introduction}\label{sec:introduction}%
-%  \global\everypar=\everypar}}%
-%  \vspace{-1\baselineskip}\vspace{-\parskip}\par
-%\else
-%  \section{Introduction}\label{sec:introduction}\par
-%\fi
-%
-% Admittedly, this is a hack and may well be fragile, but seems to do the
-% trick for me. Note the need to keep any \label that may be used right
-% after \section in the above as the hack puts \section within a raised box.
-
-
+\label{introduction}
+\input{introduction}
 
 % The very first letter is a 2 line initial drop letter followed
 % by the rest of the first word in caps (small caps for compsoc).
@@ -873,19 +851,21 @@ This section will introduce the reader to the concept of Test Driven Development
 %\hfill mds
 % 
 %\hfill January 11, 2007
-
+ 
 \section{Description}
+\label{description}
+\input{description}
+
 %Description of the chosen area: summary of the chosen area. The purpose is to describe why, how and
 %for which purpose the area is used.
 
-In this section quality will be defined in regard to both code quality and product quality. It will also describe why and how Test Driven Development, TDD, improves the quality of a product as well as the purpose of using TDD. 
+In this section quality will be defined in regard to both code quality and product quality. It will also describe why and how Test Driven Development, TDD, improves the quality of a product as well as the purpose of using TDD.
 
-\subsection{Quality}
-\label{quality}
+\subsection{Quality} 
+\label{quality}	
 \subsubsection{Code quality}
 \subsubsection{Product quality}
 \subsection{Test Driven Development}
-
 
 \section{Analysis}
 \subsection{Benefits of TDD}
@@ -1069,10 +1049,34 @@ In this section quality will be defined in regard to both code quality and produ
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
+\label{bibliography}
 
-\bibitem{IEEEhowto:kopka}
-%H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
-%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+\bibitem{IEEEhowto:kopka} % Add referenses in the same way as this one, and call them by ~\cite{biblabel}
+H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+\bibitem{mullerandhagner}
+M.~M\"{u}ller and O.~Hagner, \emph{Experiment about Test-first programming}, Volume: 149\hskip 1em plus
+  0.5em minus 0.4em\relax Karlsruhe Univ., Germany, Comput. Sci. Dept., 2002. 
+
+\bibitem{georgeandwilliams}
+M.~M\"{u}ller and O.~Hagner, \emph{Experiment about Test-first programming}, Volume: 149\hskip 1em plus
+  0.5em minus 0.4em\relax Karlsruhe Univ., Germany, Comput. Sci. Dept., 2002. 
+ 
+\bibitem{erdogmus}
+M.~M\"{u}ller and O.~Hagner, \emph{On the Effectiveness of Test-first Approach to Programming}, Volume: 149\hskip 1em plus
+  0.5em minus 0.4em\relax Karlsruhe Univ., Germany, Comput. Sci. Dept., 2002.  
+ 
+\bibitem{janzen}
+M.~M\"{u}ller and O.~Hagner, \emph{An Empirical Evaluation of the Impact of Test-Driven Development on Software Quality.}, Volume: 149\hskip 1em plus
+  0.5em minus 0.4em\relax Karlsruhe Univ., Germany, Comput. Sci. Dept., 2002.
+  
+\bibitem{microsoftibm}
+M.~M\"{u}ller and O.~Hagner, \emph{	Realizing quality improvement through test driven development: results and experiences of four industrial
+	teams}, Volume: 149\hskip 1em plus
+  0.5em minus 0.4em\relax Karlsruhe Univ., Germany, Comput. Sci. Dept., 2002.
+ 
+
 
 \end{thebibliography}
 

@@ -1,14 +1,14 @@
 The benefits of TDD can be judged by a number of different metrics and circumstances such as the maturity of the developers, test coverage and understandability/maintainability of the code. A list of some of the major benefits of TDD is given below.
 
 \begin{itemize}
-\item Gives feedback and supports new design
+\item Gives feedback and supports new design\cite{tddbyexample}
 \item Creates reflection before implementation
 \item Improves test coverage
 \item Increases quality by reducing number of defects in the software
 \end{itemize}
 
 \subsubsection*{Gives feedback and supports new design}
-In agile projects the main purpose is to be flexible, ready to change and to have a good collaboration and coordination amongst the developers writing the code. When new code is written and functionality is added to the system the old design is outdated, and to avoid patching a system with added features, refactoring will be done to integrate the new code and create a good design useful for the system with the current features. 
+In agile projects the main purpose is to be flexible, ready to change and to have a good collaboration and coordination amongst the developers writing the code. When new code is written and functionality is added to the system the old design is outdated\cite{refactor}, and to avoid patching a system with added features, refactoring will be done to integrate the new code and create a good design useful for the system with the current features. 
 Since the test cases cover the functionality of the system and not the design, the developers can refactor the code and be sure it works as it should. 
 
 In TDD test cases should be written so they test a limited scope of the functionality. This makes it easier for the developer to run regression testing after adding code and makes it easier to pinpoint where in the new code the fault is or which old functionality the new code conflicts with.
@@ -20,7 +20,7 @@ Using Test-First makes the developer think before he acts. Writing test cases fi
 According to David Scott Janzen,~\cite{janzen}, more mature developers tend to write more testcases using Test-First in contrary to Test-Last. They also break down the implementation of the functionality to more smaller methods improving the systems understandability, reusability and maintainability. The study~\cite{janzen}, made by David Scott Janzen, also shows that inexperienced developers tend to do the opposite and write larger methods when using Test-First, but as they become more experienced they move towards breaking down larger methods into several smaller ones.
 
 \subsubsection*{Increases quality by reducing number of defects in the software}
-The time spent implementing new tasks in a team using TDD is increased because of the additional time it takes to write unit tests. In a study,~\cite{microsoftibm}, four projects at Microsoft and IBM using TDD were compared to projects not using TDD. The teams experienced a 15-35\% loss of productivity but the products developed had 40-90\% less defects discovered after release compared to equivalent projects not using TDD, which meant that while losing implementation speed TDD actually increased the overall productivity of the teams. 
+The time spent implementing new tasks in a team using TDD is increased because of the additional time it takes to write unit tests. In a study,~\cite{microsoftibm}, four projects at Microsoft and IBM using TDD were compared to projects not using TDD. The teams experienced a 15-35\% loss of productivity but the products developed had 40-90\% less defects discovered after release compared to equivalent projects not using TDD but the test-last method, which meant that while losing implementation speed TDD actually increased the overall productivity of the teams. 
   
 %Referenser:
 %
